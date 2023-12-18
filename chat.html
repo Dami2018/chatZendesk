@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=34d2112f-447c-457a-b54f-613687e570bf" crossorigin="anonymous"> </script>
+  <style>
+    .fill {
+      padding-top: 100px;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+
+    /* Estilos para el elemento 'launcher' */
+    #launcher {
+      background-color: #fff; /* Color de fondo opcional */
+      border-radius: 50%; /* Forma circular */
+    }
+  </style>
+</head>
+<body style="background-color: #006ac5;">
+  <div>
+    <img alt="" class="fill" src="https://imagenes-humana.s3.amazonaws.com/Pulsa+en+el+icono+del+chat+de+parte+inferior+derecha.gif">
+  </div>
+
+  
+  <script>
+    // Esperar a que el iframe de Zendesk se cargue completamente
+    window.addEventListener('load', function() {
+      var interval = setInterval(function() {
+        var launcher = document.getElementById('launcher');
+        
+
+        if (launcher) {
+          clearInterval(interval); // Detener el intervalo de búsqueda
+          launcher.style.position = 'fixed'; // Establecer la posición fija
+          launcher.style.bottom = '60px'; // Colocarlo en la parte inferior
+          launcher.style.right = '30px'; // Colocarlo a la derecha
+          launcher.style.zIndex = '9999'; // Establecer zIndex alto para que esté encima
+          
+          // Duplicar el tamaño del contenedor launcher
+          //launcher.style.width = '100px'; // Duplicar el ancho
+          //launcher.style.height = '100px'; // Duplicar la altura
+
+        /*  let iframeContent = launcher.contentDocument || launcher.contentWindow.document;
+          let elementoDeseado = iframeContent.querySelector('.fzMFos');
+          elementoDeseado.style.height='100px'
+          elementoDeseado.style.width='100px'*/
+        }
+      }, 100); // Verificar cada 100ms si el elemento está disponible
+    });
+  </script>
+  
+
+
+</body>
+</html>
